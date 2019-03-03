@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebServerMultiThreaded",
+    "\\WebServerMultiThreaded\\bin",
+    "\\WebServerMultiThreaded\\bin\\Debug",
+    "\\WebServerMultiThreaded\\bin\\Debug\\root",
+    "\\WebServerMultiThreaded\\bin\\Debug\\root\\host",
+    "\\WebServerMultiThreaded\\bin\\Debug\\root\\host\\test"
+  ],
+  "SelectedNode": "\\WebServerMultiThreaded\\Response.cs",
+  "PreviewInSolutionExplorer": false
+}
