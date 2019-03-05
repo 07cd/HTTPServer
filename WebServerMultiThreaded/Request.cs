@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebServerMultiThreaded
 {
     internal class Request
     {
-       
-        public string Type { get; set; }
-        public string URL { get; set; }
-        public string Host { get; set; }
-
         public Request(string type, string url, string host)
         {
             Type = type;
@@ -21,14 +12,15 @@ namespace WebServerMultiThreaded
             Host = host;
         }
 
+        public string Type { get; set; }
+        public string URL { get; set; }
+        public string Host { get; set; }
+
         public static Request DeConstructStreamReaderToString(StreamReader streamReader)
         {
             // converts the streamReader into a string
-            string request = "";
-            while (streamReader.Peek() != -1)
-            {
-                request += streamReader.ReadLine() + "\n";
-            }
+            var request = "";
+            while (streamReader.Peek() != -1) request += streamReader.ReadLine() + "\n";
 
             // check if its not null
             if (string.IsNullOrEmpty(request))
@@ -42,6 +34,5 @@ namespace WebServerMultiThreaded
 
             return new Request(type, url, host);
         }
-
     }
 }

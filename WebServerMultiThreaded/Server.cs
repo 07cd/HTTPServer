@@ -18,6 +18,7 @@ namespace WebServerMultiThreaded
         public const string HOST_DIR = "/root/host";
         public const string ERR_DIR = "/root/err/";
         public const string VERSION = "HTTP/1.1";
+        public const string SERVER = "SimpleServe";
 
 
         public void StartServer()
@@ -54,6 +55,7 @@ namespace WebServerMultiThreaded
                 var streamReader = new StreamReader(client.GetStream());
 
                 Request request = Request.DeConstructStreamReaderToString(streamReader);
+
                 Response response = Response.SendResponse(request);
                 response.Post(client.GetStream());
 

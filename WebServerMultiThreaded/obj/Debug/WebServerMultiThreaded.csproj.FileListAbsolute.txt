@@ -1,0 +1,7 @@
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe.config
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.pdb
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csprojAssemblyReference.cache
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csproj.CoreCompileInputs.cache
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.exe
+C:\Users\xempe\source\repos\WebServerMultiThreaded\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.pdb

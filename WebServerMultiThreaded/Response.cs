@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WebServerMultiThreaded
 {
@@ -21,7 +24,7 @@ namespace WebServerMultiThreaded
 
         public static Response SendResponse(Request request)
         {
-            if (request == null) return NullRequest();
+            //if (request == null) return NullRequest();
             if (request.Type == "GET")
             {
                 Console.WriteLine(request.URL);
@@ -30,7 +33,31 @@ namespace WebServerMultiThreaded
                 if (fileInfo.Exists) return ReturnAFile(fileInfo);
             }
 
+            if (request.Type == "POST")
+            {
+                var d = GetParams(request.URL);
+
+                Console.WriteLine(d);
+
+                foreach (var m in d)
+                {
+                    Console.WriteLine(m);
+                }
+
+                // should return something here
+            }
+
+
             return NullRequest();
+        }
+
+        static Dictionary<string, string> GetParams(string uri)
+        {
+            var matches = Regex.Matches(uri, @"[\?&](([^&=]+)=([^&=#]*))", RegexOptions.Compiled);
+            return matches.Cast<Match>().ToDictionary(
+                m => Uri.UnescapeDataString(m.Groups[2].Value),
+                m => Uri.UnescapeDataString(m.Groups[3].Value)
+            );
         }
 
         private static Response ReturnAFile(FileInfo file)
@@ -61,6 +88,8 @@ namespace WebServerMultiThreaded
             sbHeader.AppendLine(Server.VERSION + " " + status);
             // CONTENT-LENGTH
             sbHeader.AppendLine("Content-Length: " + data.Length);
+            sbHeader.AppendLine("Date: " + DateTime.Now);
+            sbHeader.AppendLine("Server: " + Server.SERVER);
 
             // Append one more line breaks to seperate header and content.
             sbHeader.AppendLine();
@@ -73,3 +102,17 @@ namespace WebServerMultiThreaded
         }
     }
 }
+
+/*
+    Headers to return
+
+   - HTTP/1.1 200 OK 
+   - Date: Mon, 27 Jul 2009 12:28:53 GMT
+   - Server: Apache
+   Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+   ETag: "34aa387-d-1568eb00"
+   Accept-Ranges: bytes
+   - Content-Length: 51
+   Vary: Accept-Encoding
+   - Content-Type: text/plain
+ */
