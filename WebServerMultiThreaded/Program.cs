@@ -13,7 +13,6 @@ namespace WebServerMultiThreaded
             Server server = new Server();
             server.StartServer();
 
-
         }
     }
 }

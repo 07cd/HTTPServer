@@ -1,0 +1,7 @@
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe.config
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.pdb
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csprojAssemblyReference.cache
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csproj.CoreCompileInputs.cache
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.exe
+C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.pdb

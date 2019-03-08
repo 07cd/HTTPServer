@@ -4,10 +4,8 @@
     "\\WebServerMultiThreaded",
     "\\WebServerMultiThreaded\\bin",
     "\\WebServerMultiThreaded\\bin\\Debug",
-    "\\WebServerMultiThreaded\\bin\\Debug\\root",
-    "\\WebServerMultiThreaded\\bin\\Debug\\root\\host",
-    "\\WebServerMultiThreaded\\bin\\Debug\\root\\host\\test"
+    "\\WebServerMultiThreaded\\bin\\Debug\\root"
   ],
-  "SelectedNode": "\\WebServerMultiThreaded\\Response.cs",
+  "SelectedNode": "\\WebServerMultiThreaded\\WebServerMultiThreaded.csproj",
   "PreviewInSolutionExplorer": false
 }
