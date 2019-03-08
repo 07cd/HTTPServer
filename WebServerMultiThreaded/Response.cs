@@ -61,6 +61,10 @@ namespace WebServerMultiThreaded
             sbHeader.AppendLine(Server.VERSION + " " + status);
             // CONTENT-LENGTH
             sbHeader.AppendLine("Content-Length: " + data.Length);
+            sbHeader.AppendLine("Date: " + DateTime.Now);
+            sbHeader.AppendLine("Server: " + Server.SERVER);
+            sbHeader.AppendLine("Accept-Ranges: " + "bytes" );
+            sbHeader.AppendLine("ETag: " + "");
 
             // Append one more line breaks to seperate header and content.
             sbHeader.AppendLine();
