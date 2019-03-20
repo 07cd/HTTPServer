@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace WebServerMultiThreaded
 {
@@ -26,7 +21,7 @@ namespace WebServerMultiThreaded
             try
             {
                 const int port = 3000;
-                IPAddress localAddr = IPAddress.Parse(Localhost);
+                var localAddr = IPAddress.Parse(Localhost);
                 _listener = new TcpListener(localAddr, port);
                 _listener.Start();
 
@@ -35,7 +30,7 @@ namespace WebServerMultiThreaded
                 while (true)
                 {
                     //var client =  _listener.AcceptTcpClient();
-                    Task<TcpClient> client = _listener.AcceptTcpClientAsync();
+                    var client = _listener.AcceptTcpClientAsync();
                     var thread = new Thread(() => HandleClient(client.Result));
                     thread.Start();
                     thread.Join();
@@ -54,12 +49,9 @@ namespace WebServerMultiThreaded
             {
                 var streamReader = new StreamReader(client.GetStream());
 
-                Request request = Request.DeConstructStreamReaderToString(streamReader);
-                Response response = Response.SendResponse(request);
+                var request = Request.DeConstructStreamReaderToString(streamReader);
+                var response = Response.SendResponse(request);
                 response.Post(client.GetStream());
-
-
-
             }
             catch (Exception e)
             {
@@ -69,6 +61,5 @@ namespace WebServerMultiThreaded
 
             client.Close();
         }
-
     }
 }

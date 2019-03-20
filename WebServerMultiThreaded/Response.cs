@@ -25,6 +25,15 @@ namespace WebServerMultiThreaded
             if (request.Type == "GET")
             {
                 Console.WriteLine(request.URL);
+
+                if (request.URL == "/"){
+                    // search for index.html
+                    var rootfile = Environment.CurrentDirectory + Server.HOST_DIR + request.URL + "/index.html";
+                    var rootfileInfo = new FileInfo(rootfile);
+                    if (rootfileInfo.Exists) return ReturnAFile(rootfileInfo);
+                }
+
+                // if request url has the file that's requested
                 var file = Environment.CurrentDirectory + Server.HOST_DIR + request.URL;
                 var fileInfo = new FileInfo(file);
                 if (fileInfo.Exists) return ReturnAFile(fileInfo);

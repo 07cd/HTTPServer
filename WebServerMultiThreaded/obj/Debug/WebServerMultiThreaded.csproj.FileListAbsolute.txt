@@ -5,3 +5,10 @@ C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\Web
 C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csproj.CoreCompileInputs.cache
 C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.exe
 C:\Users\remco\Source\Repos\-WebServer_V1.0\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.pdb
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe.config
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.exe
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\bin\Debug\WebServerMultiThreaded.pdb
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csprojAssemblyReference.cache
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.csproj.CoreCompileInputs.cache
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.exe
+C:\Users\Xempes\Source\Repos\HTTPServer\WebServerMultiThreaded\obj\Debug\WebServerMultiThreaded.pdb
